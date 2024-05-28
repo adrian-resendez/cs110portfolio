@@ -1,0 +1,284 @@
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #f5f5dc;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.navbar {
+  background-color: #a0d1eb;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.navbar.collapsed {
+  padding: 0.5rem 1rem;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin: 0 1rem;
+}
+
+.navbar-links a {
+  color: #256dda;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #e1ffa9; /* Changed to a pastel color */
+}
+
+.navbar-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+      display: none;
+  }
+
+  .navbar.collapsed .navbar-links {
+      display: flex;
+  }
+}
+
+.section {
+  padding: 6rem 2rem;
+  background-color: #d1e7f3;
+  margin: 1rem auto;
+  max-width: 1200px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.section:hover {
+  transform: translateY(-10px);
+  background-color: #c1d6e6;
+}
+
+h2 {
+  color: #6259da;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #6259da;
+  margin: 0.5rem auto;
+}
+
+.button {
+  background-color: #918bec; /* Match the button color with the name color */
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: #6259da;
+  transform: scale(1.1);
+}
+
+.hero-section {
+  text-align: center;
+  padding-top: 6rem;
+  background-color: #d1e7f3;
+  color: #333; /* Match font color with other sections */
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hero-section:hover {
+  transform: translateY(-10px);
+  background-color: #c1d6e6;
+}
+
+.hero-section h1 {
+  color: #6259da; /* Ensure this matches the pastel blue color */
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: fadeInDown 1s ease-out;
+  position: relative;
+  display: inline-block;
+}
+
+.hero-section h1:hover::before {
+  content: url('./adrian-resendez.jpg'); /* Ensure the correct path */
+  position: absolute;
+  left: 0; /* Adjust as needed */
+  top: 0;
+  width: 150px; /* Adjust width to fit within the container */
+  height: auto; /* Ensure the height auto adjusts */
+}
+
+.hero-section h1:hover + img {
+  display: none; /* Hide the floating image when hovering over name */
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-section img {
+  width: 150px;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+  animation: float 3s ease-in-out infinite;
+}
+
+.hero-section img:hover {
+  transform: scale(1.2) rotate(360deg);
+}
+
+@keyframes fadeInDown {
+  from {
+      opacity: 0;
+      transform: translateY(-50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px);
+  }
+}
+
+.experience-item {
+  position: relative;
+  padding: 1rem;
+  background: #c1d6e6;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.experience-item:hover {
+  background-color: #d1e7f3;
+  transform: translateY(-5px);
+}
+
+.popup {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background-color: #c1d6e6;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  z-index: 10;
+  border-radius: 10px;
+}
+
+.experience-item:hover .popup {
+  display: block;
+}
+
+/* Add this at the bottom or merge with existing .footer styles */
+.footer {
+  background-color: #d1e7f3;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition for hover effect */
+}
+
+.footer:hover {
+  transform: translateY(-10px);
+  background-color: #c1d6e6; /* Add hover effect */
+}
+
+.footer a, .footer button {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.footer a:hover, .footer button:hover {
+  color: #ffd1a9;
+}
+
+
+@media (max-width: 768px) {
+  .section {
+      padding: 4rem 1rem;
+  }
+
+  h2 {
+      font-size: 2rem;
+  }
+
+  .hero-section h1 {
+      font-size: 3rem;
+  }
+
+  .hero-section p {
+      font-size: 1.2rem;
+  }
+}

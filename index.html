@@ -1,0 +1,138 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="root"></div>
+
+    <!-- JavaScript for animation and responsive design -->
+    <script src="scripts.js"></script>
+
+    <!-- React and ReactDOM -->
+    <script src="https://unpkg.com/react/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone/babel.min.js" crossorigin></script>
+
+    <script type="text/babel">
+        const Navbar = () => (
+            <nav className="navbar">
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education-skills">Education & Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#extracurriculars">Extracurriculars</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        );
+
+        const HeroSection = () => (
+            <section id="hero" className="hero-section">
+                <h1>Fernando</h1>
+                <p>I'm a <span>Full Stack Developer</span> & soon to be Computer Science graduate.</p>
+                <img src="https://cdn.jsdelivr.net/gh/hostmind/host/static/h.png" alt="Profile Picture" />
+                <div className="buttons">
+                    <a href="Adrian_Resendez_Resume_2024.pdf" target="_blank" className="button">View Resume</a>
+                </div>
+            </section>
+        );
+
+        const AboutSection = () => (
+            <section id="about" className="about-section">
+                <h2>About Me</h2>
+                <p>As a soon-to-be graduate from the University of California Riverside (UCR) in June 2024, with a major in Computer Science, I am at the threshold of an exciting journey into the expansive world of computer science and software engineering. Holding dual citizenship in Mexico and the United States, I bring a unique perspective and diverse skill set to the table.</p>
+                <p>My academic and project experiences have allowed me to delve deeply into various domains including full-stack web and mobile application development, databases, machine learning, both small and large-scale natural language processing, web development, embedded systems, and cyber security.</p>
+                <p>I am contemplating two paths forward: furthering my education through a B.S.M.S. (master's program) in computer science to enrich my research capabilities or diving straight into the workforce to apply my skills in a practical setting. Whichever path I choose, I am eager to make a significant impact in the field of computer science and software engineering.</p>
+            </section>
+        );
+
+        const EducationSkillsSection = () => (
+            <section id="education-skills" className="education-skills-section">
+                <h2>Education & Skills</h2>
+                <div className="education">
+                    <h3>Education</h3>
+                    <p>University of California Riverside, Riverside CA - B.S. Computer Science (August 2022 - April 2024)</p>
+                </div>
+                <div className="skills">
+                    <h3>Skills</h3>
+                    <p><strong>Languages:</strong> Fluent in Spanish [Native] & English.</p>
+                    <p><strong>Programming Languages:</strong> C++, Python, Java, JavaScript, HTML/CSS, PostgreSQL, Node.JS, Go, C / CUDA C</p>
+                    <p><strong>Courses:</strong> Machine Learning, Data Structures & Algorithms, Embedded Systems, Discrete Mathematics, Software Development Process, Databases, Statistics, Differential Equations, Linear Algebra, Multivariable Calculus</p>
+                    <p><strong>Frameworks:</strong> Django, React, Node.js, Unity, Google C++ Unit Testing, Pytest</p>
+                    <p><strong>Libraries:</strong> JSON for Modern C++, GoogleTest</p>
+                </div>
+            </section>
+        );
+
+        const ExperienceSection = () => (
+            <section id="experience" className="experience-section">
+                <h2>Experience & Projects</h2>
+                <div className="experience">
+                    <p><strong>Manga Collectors Website:</strong></p>
+                    <ul>
+                        <li>User-friendly website allowing collectors to catalog their book and movie collections, including features for tracking owned items and identifying missing collection pieces.</li>
+                        <li>Enhanced item listings with options to mark books and movies as available for sale or trade, facilitating user interaction and exchange within the community.</li>
+                        <li>Created social networking features enabling users to share reviews, ratings, and recent reads/views on their profiles, similar to platforms like MyAnimeList.</li>
+                    </ul>
+                    <p><strong>JSON Database:</strong></p>
+                    <ul>
+                        <li>User authentication to access corresponding collections of JSON files.</li>
+                        <li>Performance focused implementation of CRUD operations in C++ using RapidJSON library.</li>
+                        <li>Inclusive & exclusive search / filter algorithm.</li>
+                        <li>Embedded object path query.</li>
+                    </ul>
+                    <p><strong>Role-Playing Farming Game (Chico):</strong></p>
+                    <ul>
+                        <li>Worked with UCR’s Gamespawn club in the making of Chico.</li>
+                        <li>Small-scale, Stardew Valley like farming simulator focused on crop management and NPC interactions.</li>
+                        <li>In-game item storage system for future in-game economy.</li>
+                        <li>Implemented 2D sprite art & MP3’s from our team’s talented artists to create an aesthetically pleasing environment.</li>
+                        <li>Dialogue / Quest tree dependent on user & NPC interactions.</li>
+                    </ul>
+                </div>
+            </section>
+        );
+
+        const ExtracurricularsSection = () => (
+            <section id="extracurriculars" className="extracurriculars-section">
+                <h2>Extracurriculars & Interests</h2>
+                <p>I attend UCR's Rose Hack and Citrus Hackathons every year and participate in Codeforces rounds occasionally. For volunteer work, I volunteer at UCR's science fairs for kids at Chung Hall for the past 2 years. Additionally, I am looking to start after-school coding bootcamps for high school students, which is currently in the works.</p>
+            </section>
+        );
+
+        const Footer = () => (
+            <footer id="contact" className="footer">
+                <h2>Contact</h2>
+                <p>Provide links to your LinkedIn and GitHub profiles, email, and any other relevant pages.</p>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/fsernando-resendez-08451b265/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com" target="_blank">GitHub</a></li>
+                    <li><button onClick={() => alert("Email sent!")}>Email</button></li>
+                    <li><button onClick={() => navigator.clipboard.writeText("your-email@example.com")}>Copy Email</button></li>
+                </ul>
+            </footer>
+        );
+
+        const App = () => (
+            <div>
+                <Navbar />
+                <HeroSection />
+                <AboutSection />
+                <EducationSkillsSection />
+                <ExperienceSection />
+                <ExtracurricularsSection />
+                <Footer />
+            </div>
+        );
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>
+```
