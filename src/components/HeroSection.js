@@ -9,11 +9,11 @@ const HeroSection = () => (
         <img src="https://cdn.jsdelivr.net/gh/hostmind/host/static/h.png" alt="Fernando's profile" className="floating-image" />
       </div>
       <div className="hero-image-container">
-        <img src="/static/adrian-resendez.jpg" alt="Adrian Resendez" className="hero-image" />
+        <img src={`${process.env.PUBLIC_URL}/adrian-resendez.jpg`} alt="Adrian Resendez" className="hero-image" />
       </div>
       <p><span>Full Stack Developer</span> & soon to be Computer Science graduate.</p>
       <div className="buttons">
-        <a href="/static/Adrian_Resendez_Resume_2024.pdf" target="_blank" className="button">View Resume</a>
+        <a href={`${process.env.PUBLIC_URL}/Adrian_Resendez_Resume_2024.pdf`} target="_blank" className="button">View Resume</a>
       </div>
     </div>
   </section>
