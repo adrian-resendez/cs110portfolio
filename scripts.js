@@ -30,3 +30,4 @@ function sendEmail() {
     const email = 'adrian.resendezx@gmail.com';
     window.location.href = `mailto:${email}`;
 }
+//dfsdd
