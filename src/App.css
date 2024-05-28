@@ -1,4 +1,3 @@
-
 body {
   font-family: 'Poppins', sans-serif;
   color: #333;
@@ -50,7 +49,7 @@ body {
 }
 
 .navbar-links a:hover {
-  color: #e1ffa9; /* Changed to a pastel color */
+  color: #e1ffa9;
 }
 
 .navbar-toggle {
@@ -64,11 +63,11 @@ body {
 
 @media (max-width: 768px) {
   .navbar-links {
-      display: none;
+    display: none;
   }
 
   .navbar.collapsed .navbar-links {
-      display: flex;
+    display: flex;
   }
 }
 
@@ -105,7 +104,7 @@ h2::after {
 }
 
 .button {
-  background-color: #918bec; /* Match the button color with the name color */
+  background-color: #918bec;
   color: white;
   padding: 0.5rem 1rem;
   text-decoration: none;
@@ -123,7 +122,7 @@ h2::after {
   text-align: center;
   padding-top: 6rem;
   background-color: #d1e7f3;
-  color: #333; /* Match font color with other sections */
+  color: #333;
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease, background-color 0.3s ease;
@@ -134,73 +133,78 @@ h2::after {
   background-color: #c1d6e6;
 }
 
-.hero-section h1 {
-  color: #6259da; /* Ensure this matches the pastel blue color */
-  font-size: 4rem;
-  margin-bottom: 1rem;
-  animation: fadeInDown 1s ease-out;
-  position: relative;
-  display: inline-block;
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
-.hero-section h1:hover::before {
-  content: url('./adrian-resendez.jpg'); /* Ensure the correct path */
-  position: absolute;
-  left: 0; /* Adjust as needed */
-  top: 0;
-  width: 150px; /* Adjust width to fit within the container */
-  height: auto; /* Ensure the height auto adjusts */
+.name-and-astronaut {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-.hero-section h1:hover + img {
-  display: none; /* Hide the floating image when hovering over name */
-}
-
-.hero-section p {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  animation: fadeInUp 1s ease-out;
-}
-
-.hero-section img {
-  width: 150px;
+.floating-image {
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   transition: transform 0.3s ease-in-out;
   animation: float 3s ease-in-out infinite;
 }
 
-.hero-section img:hover {
-  transform: scale(1.2) rotate(360deg);
+.hero-image-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  transition: all 5s ease-in-out, width 2.5s ease-in-out, height 2.5s ease-in-out;
 }
 
-@keyframes fadeInDown {
-  from {
-      opacity: 0;
-      transform: translateY(-50px);
-  }
-  to {
-      opacity: 1;
-      transform: translateY(0);
-  }
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 5s ease-in-out, width 2.5s ease-in-out, height 2.5s ease-in-out;
 }
 
-@keyframes fadeInUp {
-  from {
-      opacity: 0;
-      transform: translateY(50px);
-  }
-  to {
-      opacity: 1;
-      transform: translateY(0);
-  }
+.hero-image-container:hover {
+  width: 800px;
+  height: 600px;
+  border-radius: 0;
+  transition: width 5s ease-in-out, height 5s ease-in-out;
+}
+
+.hero-image-container:hover .hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: width 5s ease-in-out, height 5s ease-in-out;
+}
+
+.hero-section h1 {
+  color: #6259da;
+  font-size: 4rem;
+  margin: 0;
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.buttons {
+  margin-top: 2rem;
 }
 
 @keyframes float {
   0%, 100% {
-      transform: translateY(0);
+    transform: translateY(0);
   }
   50% {
-      transform: translateY(-20px);
+    transform: translateY(-20px);
   }
 }
 
@@ -235,50 +239,67 @@ h2::after {
   display: block;
 }
 
-/* Add this at the bottom or merge with existing .footer styles */
 .footer {
   background-color: #d1e7f3;
   color: white;
   padding: 2rem;
   text-align: center;
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition for hover effect */
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .footer:hover {
   transform: translateY(-10px);
-  background-color: #c1d6e6; /* Add hover effect */
+  background-color: #c1d6e6;
 }
 
-.footer a, .footer button {
+.footer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.footer-button {
+  background-color: #918bec;
   color: white;
+  padding: 0.5rem 1rem;
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-  background: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   border: none;
   cursor: pointer;
   outline: none;
+  display: inline-block;
 }
 
-.footer a:hover, .footer button:hover {
-  color: #ffd1a9;
+.footer-button:hover {
+  background-color: #6259da;
+  transform: scale(1.1);
 }
-
 
 @media (max-width: 768px) {
   .section {
-      padding: 4rem 1rem;
+    padding: 4rem 1rem;
   }
 
   h2 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .hero-section h1 {
-      font-size: 3rem;
+    font-size: 3rem;
   }
 
   .hero-section p {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
   }
+
+  .floating-image {
+    width: 50px; /* Adjust this value to make the image larger */
+    height: 50px; /* Adjust this value to make the image larger */
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+    animation: float 3s ease-in-out infinite;
+  }
+  
 }

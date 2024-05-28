@@ -1,13 +1,20 @@
 import React from 'react';
-import '../App.css';  // Adjust the path based on your actual project structure
+import '../App.css';
 
 const HeroSection = () => (
   <section id="hero" className="hero-section section">
-    <h1>Fernando Resendez</h1>
-    <p>I'm a <span>Full Stack Developer</span> & soon to be Computer Science graduate.</p>
-    <img src="https://cdn.jsdelivr.net/gh/hostmind/host/static/h.png" alt="Fernando's profile" className="floating-image" />
-    <div className="buttons">
-      <a href="/static/Adrian_Resendez_Resume_2024.pdf" target="_blank" className="button">View Resume</a>
+    <div className="hero-content">
+      <div className="name-and-astronaut">
+        <h1>Fernando Resendez</h1>
+        <img src="https://cdn.jsdelivr.net/gh/hostmind/host/static/h.png" alt="Fernando's profile" className="floating-image" />
+      </div>
+      <div className="hero-image-container">
+        <img src="/static/adrian-resendez.jpg" alt="Adrian Resendez" className="hero-image" />
+      </div>
+      <p><span>Full Stack Developer</span> & soon to be Computer Science graduate.</p>
+      <div className="buttons">
+        <a href="/static/Adrian_Resendez_Resume_2024.pdf" target="_blank" className="button">View Resume</a>
+      </div>
     </div>
   </section>
 );
