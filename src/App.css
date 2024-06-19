@@ -301,5 +301,36 @@ h2::after {
     transition: transform 0.3s ease-in-out;
     animation: float 3s ease-in-out infinite;
   }
-  
+}
+
+/* Add the dropdown menu styles here */
+.navbar .dropdown-container {
+  position: relative;
+}
+
+.navbar .dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #c1d6e6;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.navbar .dropdown-container:hover .dropdown-menu {
+  display: block;
+}
+
+.navbar .dropdown-menu li {
+  list-style: none;
+}
+
+.navbar .dropdown-menu li a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #6259da;
+}
+
+.navbar .dropdown-menu li a:hover {
+  background-color: #f1f1f1;
 }

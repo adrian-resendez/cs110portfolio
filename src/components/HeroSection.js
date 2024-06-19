@@ -13,7 +13,7 @@ const HeroSection = () => (
       </div>
       <p><span>Full Stack Developer</span> & soon to be Computer Science graduate.</p>
       <div className="buttons">
-        <a href={`${process.env.PUBLIC_URL}/Adrian_Resendez_Resume_2024.pdf`} target="_blank" className="button">View Resume</a>
+        <a href={`${process.env.PUBLIC_URL}/Resume_2024.pdf`} target="_blank" rel="noreferrer" className="button">View Resume</a>
       </div>
     </div>
   </section>
