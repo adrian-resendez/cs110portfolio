@@ -312,7 +312,7 @@ h2::after {
   display: none;
   position: absolute;
   background-color: #c1d6e6;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(167, 17, 17, 0.137);
   z-index: 1;
 }
 
