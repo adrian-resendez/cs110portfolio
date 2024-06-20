@@ -30,7 +30,7 @@ const Navbar = ({ scrollToElement }) => {
               {/* Add more projects as needed */}
             </ul>
           </li>
-          <li><Link to="/" onClick={() => handleScrollTo('footer')}>Contact</Link></li>
+          <li><Link to="/" onClick={() => handleScrollTo('contact')}>Contact</Link></li>
         </ul>
         <button className="navbar-toggle" onClick={toggleNavbar}>
           {isCollapsed ? '↓' : '↑'}
