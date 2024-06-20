@@ -23,13 +23,14 @@ const Navbar = ({ scrollToElement }) => {
           <li><Link to="/" onClick={() => handleScrollTo('education-skills')}>Education & Skills</Link></li>
           <li><Link to="/" onClick={() => handleScrollTo('experience')}>Experience</Link></li>
           <li><Link to="/" onClick={() => handleScrollTo('extracurriculars')}>Extracurriculars</Link></li>
-          <li className="dropdown-container">
+          {/* Commented out the dropdown menu for Projects */}
+          {/* <li className="dropdown-container">
             <span>Projects</span>
             <ul className="dropdown-menu">
               <li><Link to="/projects/manga">Manga Project</Link></li>
-              {/* Add more projects as needed */}
+              Add more projects as needed
             </ul>
-          </li>
+          </li> */}
           <li><Link to="/" onClick={() => handleScrollTo('contact')}>Contact</Link></li>
         </ul>
         <button className="navbar-toggle" onClick={toggleNavbar}>
