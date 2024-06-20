@@ -7,8 +7,8 @@ const Footer = () => (
     <div className="footer-buttons">
       <a href="https://www.linkedin.com/in/fernando-resendez-08451b265/" target="_blank" rel="noopener noreferrer" className="footer-button">LinkedIn</a>
       <a href="https://github.com/adrian-resendez" target="_blank" rel="noopener noreferrer" className="footer-button">GitHub</a>
-      <button onClick={() => window.location.href='mailto:adrian-resendez@outlook.com'} className="footer-button">Email</button>
-      <button onClick={() => navigator.clipboard.writeText('adrian-resendez@outlook.com')} className="footer-button">Copy Email</button>
+      {/*<button onClick={() => window.location.href='mailto:resendez.fa@gmail.com'} className="footer-button">Email</button>*/}
+      <button onClick={() => navigator.clipboard.writeText('resendez.fa@gmail.com')} className="footer-button">Copy Email</button>
     </div>
   </footer>
 );

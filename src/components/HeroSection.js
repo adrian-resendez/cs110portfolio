@@ -11,7 +11,7 @@ const HeroSection = () => (
       <div className="hero-image-container">
         <img src={`${process.env.PUBLIC_URL}/adrian-resendez.jpg`} alt="Adrian Resendez" className="hero-image" />
       </div>
-      <p><span>Full Stack Developer</span> & soon to be Computer Science graduate.</p>
+      <p><span>Software Engineer</span> | B.S. Computer Science</p>
       <div className="buttons">
         <a href={`${process.env.PUBLIC_URL}/resume_june2024.pdf`} target="_blank" rel="noreferrer" className="button">View Resume</a>
       </div>
